@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.NamedQuery;
 import javax.persistence.PostLoad;
 import javax.persistence.Table;
 
@@ -20,7 +19,6 @@ import com.google.common.base.Objects;
 
 @Entity
 @Table(name = "CT_COMMENTS")
-@NamedQuery(name = "Comment.findByCommentedObjectIn", query = "select c from Comment c where c.commentedObject in (?1)")
 public class Comment implements BaseEntity
 {
   @Id
